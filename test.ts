@@ -1,4 +1,4 @@
-let a: string; //Type annotation
+let a: number; //Type annotation
 
-a = "Mark";
-a = 39; //Type 'number' is not assignable to type 'string'.
+a = "Mark"; //Type 'string' is not assignable to type 'number'.
+a = 39;
