@@ -21,3 +21,14 @@ objt = [{name: 'Mark'}]; //array도 넣을 수 있음
 // objt = Symbol(); //error :symbol
 // objt = null; //error : null
 // objt = undefined; //error : undefined
+
+declare function create(o: object | null): void; //primitive type 은 받지 않겠다는 선언이다.
+create({ prop: 0 });
+create(null);
+// create(42); //error : number
+// create("string")); //error : string
+// create(false); //error : boolean
+// create(undefined); //error : undefined
+
+//Object.create
+// Object.create(0); //error : number 이기 때문에 object 와야 하는 곳에 들어갈 수 없다.
