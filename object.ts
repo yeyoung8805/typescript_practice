@@ -1,5 +1,6 @@
 //object 란?
 //a type that represents the non-primitive type
+//(참고) non-primitive type : Not number, string, boolean, bigint, symbol, null, or undefined.
 
 
 //create by object literal
