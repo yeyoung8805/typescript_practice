@@ -1,3 +1,7 @@
+//object 란?
+//a type that represents the non-primitive type
+
+
 //create by object literal
 const person1 = {name:'Mark', age:39};
 //person1 is not "object" type.
