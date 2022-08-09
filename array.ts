@@ -3,5 +3,5 @@
 //사용 방법 : 타입[] , Array<타입>
 
 
-let list1: number[] = [1, 2, 3];
+let list1: (number | string)[] = [1, 2, 3, "4"];
 // let list2: Array<number> = [1, 2, 3]; //이러한 선언방법은 JS, TS 가 충돌날 수 있다. 권장하지 않음. 위 선언방법을 권장한다.
