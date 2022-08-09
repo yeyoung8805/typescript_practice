@@ -7,7 +7,7 @@ console.log(Symbol('foo') === Symbol('foo')); //false
 const sym = Symbol();
 
 const obj = {
-  sym: "value",
+  [sym]: "value", //이렇게 사용할 경우 sym은 Symbol()을 의미하게 되어 아래와 같이 접근할 수 없게 된다.
 };
 
-obj["sym"] //이렇게 사용할 경우, obj의 sym에 이러한 방식으로 접근할 수가 있다.
+// obj["sym"] // 이렇게 접근할 시 에러 발생
