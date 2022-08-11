@@ -1,4 +1,4 @@
-declare const maybe: unknown;
+declare const maybe: unknown; //any를 사용하려는 자리에 unknown을 사용하려는 노력을 해야한다.
 
 // const aNumber: number = maybe; //error : Type 'unknown' is not assignable to type 'number'.
 if(maybe === 123) { //maybe, type guarded as number
