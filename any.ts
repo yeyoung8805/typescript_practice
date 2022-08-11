@@ -4,3 +4,7 @@ function returnAny(message: any) :any { //no implicit any (message에 any 타입
 
 const any1 = returnAny("return whatever");
 any1.toString(); //any1이 any 타입으로 지정돼있기 때문에, 어느 것이든 될 수 있다!
+
+//any의 "전파"를 살펴보고자 한다.
+let looselyTyped: any = {};
+const d = looselyTyped.a.b.c.d; //any로 지정된 곳 이후의 코드가 안전성을 잃을 수 있다. a,b,c,d 도 모두 any 타입이 전파되므로.
