@@ -14,3 +14,26 @@ function fail() {
 function infiniteLoop(): never {
   while(true) {} //반복구문이 계속 실행되며, while문 밑으로는 내려가지 않을 것이므로 return 형이 never 인 것이다.
 }
+
+let a: string = "hello";
+if(typeof a !== 'string') { //typeof 라는 가드이다.
+  a; //never type
+}
+
+
+declare const b: string;
+if(typeof b !== 'string') {
+  b; //never
+}
+
+declare const c: string | number;
+if(typeof c !== 'string') {
+  c; //number
+}
+
+//never 가 쓰이는 예제
+//type 이 변수처럼 쓰이는 제네릭이다.
+//T가 string 이면? T & {[index: string]: any} 이고 아니면 never 이다.
+type Indexable<T> = T extends string ? T & {[index: string]: any} : never;
+type ObjectIndexable = Indexable<{}>;
+const d : Indexable<{}> = ''; // error : Type 'string' is not assignable to type 'never'.
