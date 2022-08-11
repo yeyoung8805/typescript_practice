@@ -9,7 +9,7 @@ any1.toString(); //any1이 any 타입으로 지정돼있기 때문에, 어느 �
 let looselyTyped: any = {};
 const d = looselyTyped.a.b.c.d; //any로 지정된 곳 이후의 코드가 안전성을 잃을 수 있다. a,b,c,d 도 모두 any 타입이 전파되므로.
 
-function leakingAny(obj: any) {
+function leakingAny(obj: any) { //누수 막는 가장 좋은 방법은 obj 가 사용되기 전에 가드하는것이다! 이것에 대해서는 unknown에서 배울 것이다!
   const a: number = obj.num; //a는 number (a의 타입을 지정해줌으로써 누수를 막는 것이다!)
   const b = a + 1; //b도 number
   return b;
