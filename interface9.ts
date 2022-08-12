@@ -56,8 +56,8 @@ interface MergingInterface {
   b: string;
 }
 let mi: MergingInterface;
-mi.a; 
-mi.b;
+// mi.a; 
+// mi.b;
 
 //6.Declaration merging - type alias
 //type alias 에서는 interface 와 달리, 
