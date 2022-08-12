@@ -58,3 +58,13 @@ interface MergingInterface {
 let mi: MergingInterface;
 mi.a; 
 mi.b;
+
+//6.Declaration merging - type alias
+//type alias 에서는 interface 와 달리, 
+//Declaration merging 이 불가능하다.
+type MergingType = {
+  a: string;
+};
+// type MergingType = { //error : Duplicate identifier 'MergingType'.
+//   b: string;
+// };
