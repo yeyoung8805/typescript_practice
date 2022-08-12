@@ -21,5 +21,8 @@ const p42 = {
 //     console.log(`안녕하세요! ${this.name} 입니다.`);
 //   },
 // };
+//아래 결과 확인하려면 terminal에 
+//npx tsc 한 다음,
+//node interface4.js 실행하면 된다.
 p41.hello();
 p42.hello();
