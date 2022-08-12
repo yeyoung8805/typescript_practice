@@ -7,3 +7,10 @@ type EatType = (food: string) => void;
 interface IEat {
   (food: string): void;
 }
+
+//compare "array" in type alias VS interface
+type PersonList = string[];
+
+interface IPersonList {
+  [index: number]: string;
+}
