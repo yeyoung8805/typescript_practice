@@ -3,11 +3,11 @@ interface Person1 {
   age: number;
 }
 
-function hello1(person: {name: string, age: number}): void{
+function hello1(person: Person1): void{
   console.log(`안녕하세요! ${person.name} 입니다.`);
 }
 
-const p1: {name: string, age: number} = {
+const p1: Person1 = {
   name: "Mark",
   age: 39,
 }
