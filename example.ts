@@ -1,12 +1,12 @@
 class Person {
   public name: string = "Mark"; //프로퍼티
-  private age: number; //!를 제거하고 아래 constructor 에서 정의해준다.
+  private _age!: number; //!를 제거하고 아래 constructor 에서 정의해준다.
   // async constructor(age?: number){ //생성자에는 async 설정할 수 없다!
   public constructor(age?: number){
     if(age === undefined ){
-      this.age = 20;
+      this._age = 20;
     }else {
-      this.age = age;
+      this._age = age;
     }
   }
 
