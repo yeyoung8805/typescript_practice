@@ -1,18 +1,10 @@
-//class => object 를 만들어냄
-//{mark: 'male', jade: 'male'}
-//{chloe: 'female', alex: 'male', anna: 'female'}
-//위 두 object를 만들어 낼수있는 클래스 만들자
-class Students {
-  [index: string] : "male" | "female"; //index signature in class
+class Person {
+  public static hello() {
+    console.log("안녕하세요.");
+  }
 }
 
-const a1 = new Students();
-a1.mark = "male";
-a1.jade = "male";
-console.log(a1);
+const p1 = new Person();
+// p1.hello(); //error : hello() 가 static method 이기 때문
 
-const b1 = new Students();
-b1.chloe = "female";
-b1.alex = "male";
-b1.anna = "female";
-console.log(b1);
+Person.hello();
