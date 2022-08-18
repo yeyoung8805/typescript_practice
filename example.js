@@ -1,12 +1,16 @@
 "use strict";
-class Person {
-    constructor(_name, age) {
-        this._name = _name;
-        this.age = age;
-        this.name = "Mark";
-    }
+//class => object 를 만들어냄
+//{mark: 'male', jade: 'male'}
+//{chloe: 'female', alex: 'male', anna: 'female'}
+//위 두 object를 만들어 낼수있는 클래스 만들자
+class Students {
 }
-const p1 = new Person("Mark", 38);
-console.log(p1.name);
-p1.name = "Anna"; //Person 클래스 밖에서 name 프로퍼티를 호출하려고 하면 에러 나온다.
-console.log(p1.name);
+const a1 = new Students();
+a1.mark = "male";
+a1.jade = "male";
+console.log(a1);
+const b1 = new Students();
+b1.chloe = "female";
+b1.alex = "male";
+b1.anna = "female";
+console.log(b1);
