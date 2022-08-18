@@ -24,7 +24,5 @@ class Person {
     }
 }
 const p1 = new Person(38);
-await p1.init();
-const p2 = new Person();
 console.log(p1);
-console.log(p1.age);
+// console.log(p1.age); // not approachable
