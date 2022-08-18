@@ -3,7 +3,7 @@
 //{chloe: 'female', alex: 'male', anna: 'female'}
 //위 두 object를 만들어 낼수있는 클래스 만들자
 class Students {
-  [index: string] : string; //index signature in class
+  [index: string] : "male" | "female"; //index signature in class
 }
 
 const a1 = new Students();
