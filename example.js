@@ -6,8 +6,8 @@ class Person {
     }
     get name() {
         //
-        console.log('get');
-        return this._name;
+        // console.log('get');
+        return this._name + "Kim";
     }
     set name(n) {
         console.log('set');
