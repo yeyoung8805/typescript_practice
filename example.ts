@@ -1,6 +1,10 @@
 class Person {
   public readonly name: string = "Mark";
+  private readonly country: string = "Korea";
   public constructor(private _name: string, public age: number){}
+  hello() {
+    this.country = "Italy"; //error : country is a readonly property (Person 클래스내의 메소드 안이더라도)
+  }
 }
 
 const p1: Person = new Person("Mark", 38);
