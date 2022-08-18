@@ -1,18 +1,7 @@
-class Person {
+//class 로부터 단 하나의 object 만 생성하는 것을 싱글톤이라고 한다.
+class ClassName {
 
-  public static City = "Seoul";
-  public hello() {
-    console.log("안녕하세요.", Person.City);
-  }
-  public change() {
-    Person.City = "LA";
-  }
 }
 
-const p1 = new Person();
-p1.hello(); //error : hello() 가 static method 이기 때문
-const p2 = new Person();
-p2.hello();
-
-p1.change();
-p2.hello();
+const a1 = new ClassName();
+const b1 = new ClassName();
