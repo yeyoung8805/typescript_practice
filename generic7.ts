@@ -15,10 +15,14 @@ const keys: Keys = "name";
 // => IPerson["name" | "age"] 
 // => IPerson["name"] | IPerson["age"]
 // string | number
-function getProp(obj: IPerson, key: keyof IPerson): IPerson[keyof IPerson] {
+function getProp<T, K extends keyof T>(obj: T, key: K): T[K] { //K는 name | age 만 받을 수 있음 
   return obj[key];
 }
 
-function setProp(obj: IPerson, key: keyof IPerson, value: string | number): void {
+getProp(personConst, 'age'); //getProp 두번째 파라미터는 'age', 'name' 밖에 못들어간다.
+
+function setProp<T, K extends keyof T>(obj: T, key: K, value: T[K]): void {
   obj[key] = value;
 }
+
+setProp(personConst, "name", "Jane");
