@@ -7,5 +7,12 @@ class Parent {
   }
 }
 
-const p = new Parent("Mark", 39);
-p.print();
+// const p = new Parent("Mark", 39);
+// p.print();
+
+class Child extends Parent {
+
+}
+
+const c1 = new Child("Son", 5);
+c1.print();
