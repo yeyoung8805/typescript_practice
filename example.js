@@ -5,13 +5,7 @@ class Person {
         this.age = age;
     }
     get name() {
-        //
-        // console.log('get');
         return this._name + "Kim";
-    }
-    set name(n) {
-        console.log('set');
-        this._name = n;
     }
 }
 const p1 = new Person("Mark", 38);

@@ -1,8 +1,6 @@
 class Person {
   public constructor(private _name: string, public age: number){}
   get name() {
-    //
-    // console.log('get');
     return this._name + "Kim";
   }
 
