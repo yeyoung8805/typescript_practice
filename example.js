@@ -1,16 +1,18 @@
 "use strict";
-class Person {
-    hello() {
-        console.log("안녕하세요.", Person.City);
-    }
-    change() {
-        Person.City = "LA";
+//class 로부터 단 하나의 object 만 생성하는 것을 싱글톤이라고 한다.
+class ClassName {
+    constructor() { }
+    static getInstance() {
+        // ClassName으로부터 만든 object 가 있으면 그것을 리턴
+        // 없으면, 만들어서 대입한다.
+        if (ClassName.instance === null) {
+            ClassName.instance = new ClassName();
+        }
+        return ClassName.instance;
     }
 }
-Person.City = "Seoul";
-const p1 = new Person();
-p1.hello(); //error : hello() 가 static method 이기 때문
-const p2 = new Person();
-p2.hello();
-p1.change();
-p2.hello();
+ClassName.instance = null;
+//private 을 사용했기 때문에 new 클래스명() 사용할 수 없다 .에러난다.
+const a1 = ClassName.getInstance();
+const b1 = ClassName.getInstance();
+console.log(a1 === b1);
