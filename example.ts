@@ -5,18 +5,23 @@ class Parent {
   public print() : void {
     console.log(`이름은 ${this._name} 이고, 나이는 ${this._age} 입니다.`);
   }
+
+  protected printName(): void {
+    console.log(this._name);
+  }
 }
 
 // const p = new Parent("Mark", 39);
 // p.print();
 
 class Child extends Parent {
-  public _name = "Mark Jr.";
-
   public gender = "male";
+
+  constructor(age: number) {
+    super("Mark Jr.", age); //자식의 constructor 에서는 super() 를 항상 먼저 호줄해줘야 한다!
+    this.printName();
+  }
 }
 
-const c1 = new Child("Son", 5);
+const c1 = new Child(5);
 c1.print();
-c1.gender;
-c1._name;

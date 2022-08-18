@@ -8,6 +8,18 @@ class Parent {
     print() {
         console.log(`이름은 ${this._name} 이고, 나이는 ${this._age} 입니다.`);
     }
+    printName() {
+        console.log(this._name);
+    }
 }
-const p = new Parent("Mark", 39);
-p.print();
+// const p = new Parent("Mark", 39);
+// p.print();
+class Child extends Parent {
+    constructor(age) {
+        super("Mark Jr.", age);
+        this.gender = "male";
+        this.printName();
+    }
+}
+const c1 = new Child(5);
+c1.print();
