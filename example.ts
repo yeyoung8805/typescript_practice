@@ -1,19 +1,11 @@
-//class 로부터 단 하나의 object 만 생성하는 것을 싱글톤이라고 한다.
-class ClassName {
-  private static instance: ClassName | null = null;
-  public static getInstance(): ClassName {
-    // ClassName으로부터 만든 object 가 있으면 그것을 리턴
-    // 없으면, 만들어서 대입한다.
-    if(ClassName.instance === null) {
-      ClassName.instance = new ClassName();
-    }
-    return ClassName.instance;
+//상속 : 클래스가 다른 클래스를 가져다가 자신의 역할을 추가하는것
+class Parent {
+  constructor(protected _name: string, private _age: number) {}
+
+  public print() : void {
+    console.log(`이름은 ${this._name} 이고, 나이는 ${this._age} 입니다.`);
   }
-  private constructor() {}
 }
 
-//private 을 사용했기 때문에 new 클래스명() 사용할 수 없다 .에러난다.
-const a1 = ClassName.getInstance();
-const b1 = ClassName.getInstance();
-
-console.log(a1 === b1); //result : true
+const p = new Parent("Mark", 39);
+p.print();
