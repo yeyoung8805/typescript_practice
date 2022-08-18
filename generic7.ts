@@ -8,10 +8,17 @@ const personConst: IPerson = {
   age : 30,
 };
 
-function getProp(obj: IPerson, key: 'name' | 'age'): string | number {
+type Keys = keyof IPerson; //Keys는 결과물의 타입이 반환된다.
+const keys: Keys = "name";
+
+// IPerson[keyof IPerson]  
+// => IPerson["name" | "age"] 
+// => IPerson["name"] | IPerson["age"]
+// string | number
+function getProp(obj: IPerson, key: keyof IPerson): IPerson[keyof IPerson] {
   return obj[key];
 }
 
-function setProp(obj: IPerson, key: 'name' | 'age', value: string | number): void {
+function setProp(obj: IPerson, key: keyof IPerson, value: string | number): void {
   obj[key] = value;
 }
