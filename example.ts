@@ -11,8 +11,12 @@ class Parent {
 // p.print();
 
 class Child extends Parent {
+  public _name = "Mark Jr.";
 
+  public gender = "male";
 }
 
 const c1 = new Child("Son", 5);
 c1.print();
+c1.gender;
+c1._name;
