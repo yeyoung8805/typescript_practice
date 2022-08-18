@@ -1,10 +1,6 @@
 class Person {
-  name: string; //프로퍼티
-  age: number; //!를 제거하고 아래 constructor 에서 정의해준다.
-  // async constructor(age?: number){ //생성자에는 async 설정할 수 없다!
-  public constructor(name: string, age: number){
-    this.name = name;
-    this.age = age;
+  public constructor(public name: string, public age: number){
+    
   }
 
 }
